@@ -5,6 +5,16 @@ const music = document.getElementById("music");
 let currentImageIndex = -1;
 let playedMusic = false;
 
+document.getElementById("previous").addEventListener("click", (e) => {
+  e.stopPropagation();
+  previous();
+});
+
+document.getElementById("next").addEventListener("click", (e) => {
+  e.stopPropagation();
+  next();
+});
+
 large_image_container.setAttribute("onclick", "hideLarge()");
 
 let srcs = [];
